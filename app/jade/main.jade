@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Главная
+		include inc/head.jade
+		include inc/css.jade
+	body.main
+		#app
+			.game__wrap(style="background-image: url('img/auth-register-bg.jpg')")
+				.game
+					.game__auth
+						.wrapper
+							.auth
+								figure.auth__img
+									img(src="img/auth-img.png")
+								.auth__form
+									.auth-form
+										.auth-form__titles
+											.auth-form__switch
+												.form-switch
+													.form-switch__input-cont
+														a.form-switch__label.current(href="#") Вход
+													.form-switch__input-cont
+														a.form-switch__label(href="#") Регистрация
+										form(action="#")
+											.auth-form
+												.auth-form__input-cont
+													input.default-input(type="email" placeholder="E-mail")
+												.auth-form__input-cont
+													input.default-input(type="password" placeholder="Пароль")
+												.auth-form__footer
+													.auth-form__footer-submit
+														input.arrow-btn(type="submit" value="Войти")
+													.auth-form__footer-forget
+														a.auth-form__forget-link(href="#") Забыли свой пароль?
+												.auth-form__soc
+													.auth-form__soc-label Войти через:
+													.soc
+														each name in ["vk", "gp", "fb"]
+															a.soc__link(href="#")
+																img(src="img/soc-"+name+".png")
+		include inc/scripts.jade

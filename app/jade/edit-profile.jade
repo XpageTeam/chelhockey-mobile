@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Профиль - редактирование
+		include inc/head.jade
+		include inc/css.jade
+	body.main
+		#app
+			.game__cont(style="background-image: url('img/auth-register-bg.jpg')")
+				.game
+					.game__game
+						.wrapper
+							.game-interface
+								.game-interface__top
+									h1.game-title Название игры
+									.game__links
+										a.exit-link(href="#" title="Выход") Выход
+								.game-interface__middle
+							.game__wrapper
+								.profile
+									.edit-profile
+										.edit-profile__left
+											.edit-profile__back-url
+												a.back-url(href="#") Вернуться в профиль
+											.edit-profile__user
+												.player
+													figure.player__photo
+														img(src="img/photos/player-photo.jpg")
+													.player__name
+														span Иван
+														span Иванов
+										.edit-profile__right
+											.edit
+												form
+													.edit__input-cont
+														.file-input__cont
+															input.file-input(type="file" id="file")
+															input.file-input.default-input(type="text" placeholder="Загрузить картинку")
+															label.file-input__label.default__label(for="file") Изменить аватар
+													.edit__input-cont
+														input.default-input(type="text" placeholder="Иван Иванов")
+														label.default__label Ник в игре
+													.edit__input-cont.edit__input-cont--double
+														.edit__input-cont
+															select.default-input.default-input--select
+																option(value="true") Мужской
+																option(value="false") Женский
+															label.default__label Пол
+														.edit__input-cont
+															input.default-input.date-input(type="text")
+															label.default__label Дата рождения
+													.edit__submit
+														input.arrow-btn(type="submit" value="Сохранить")
+
+		include inc/scripts.jade

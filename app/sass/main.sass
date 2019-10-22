@@ -1,0 +1,1493 @@
+$output-bourbon-deprecation-warnings: false;
+@import "bourbon"
+@import "vars"
+@import "base"
+@import "functions"
+
+
+.find_bug_link
+	position: fixed
+	right: 20px
+	bottom: 20px
+	background: $main-color
+	color: #fff
+	text-decoration: none
+	font-size: rem(16)
+	padding: 10px 20px
+	border-radius: 30px
+
+.forms
+	.title
+		color: #000
+		font-size: rem(20)
+		margin-bottom: 20px
+
+	label 
+		color: #000
+		margin-bottom: 10px
+
+	.forms-wrap
+		position: relative
+		
+		&:not(:first-child)
+			margin-top: 20px
+
+	.f_input_message
+		border: 1px solid #d4d4d4
+		font-size: rem(13)
+		background: #fff
+		color: #000
+		padding: 7px 10px
+		border-radius: 7px
+		position: absolute
+		bottom: 45px
+		right: -6px
+		box-shadow: 0px 0px 21px 0px rgba(0, 0, 0, 0.1)
+		display: none
+
+		&:after
+			content: ""
+			background: url("../img/error-triangle.png") no-repeat
+			position: absolute
+			top: calc(100% - 0px)
+			right: 19px
+			+size(15px 8px)
+
+		&--file
+			bottom: initial
+			right: 21%
+			top: 0
+
+		&-icon
+			display: block
+			border-radius: 50%
+			position: absolute
+			border: 1px solid red
+			+size(19px)
+			background: #fff
+			bottom: -32px
+			right: 16px
+
+			&:after, &:before
+				content: ""
+				position: absolute
+				width: 1px
+				background: red
+				left: calc(50% - 1px)
+
+			&:before
+				top: 4px
+				height: 8px
+
+			&:after
+				bottom: 4px
+				height: 2px
+
+
+	.forms__input.error
+		border-color: red
+
+
+		~ .f_input_message	
+			display: block
+			
+
+
+	input[type="submit"] 
+		display: inline-block
+		background: #d10e0e
+		border: none
+		color: #fff
+		font-size: .875rem
+		padding: 20px 36px 22px
+		box-shadow: 0 0 73px 0 rgba(209,14,14,.3)
+		transition: background-color .3s ease
+		font-weight: 500
+		letter-spacing: .03em
+		text-decoration: none
+		cursor: pointer
+		user-select: none
+		text-align: center
+		line-height: 1
+
+.clone--input
+	order: -1
+	margin-left: auto
+
+.multi-file
+	margin-top: 20px
+	
+
+.forms-input-cont--textarea
+	display: flex
+	flex-direction: column-reverse
+
+.game
+
+	&__cont
+		height: 100vh
+
+	&__wrap
+		background: 
+			position: center
+			size: cover
+			repeat: no-repeat
+		overflow: auto
+		-webkit-overflow-scrolling: touch
+		min-height: 620px
+
+.confirm-popup__btn
+
+	.arrow-btn
+		background: #d10e0e !important
+		padding: 20px 36px !important
+
+.exit-link
+	@extend %clear-text
+	display: inline-block
+	border-radius: 50%
+	background: url("../img/ico-exit.png") center no-repeat, rgba(#fff, .24)
+	background-size: 16px !important
+	+size(39px)
+	transition: background-color .3s ease
+
+	&:hover, &:focus
+		background-color: $main-color
+
+.burger
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	+size(28px 20px)
+	cursor: pointer
+	position: relative
+	z-index: 11
+	transition: width .3s ease
+
+	&:after, &:before
+		content: ""
+		transition: transform .3s ease
+		transform-origin: left
+
+	&:after, &:before, span
+		display: inline-block
+		background: #fff
+		height: 2px
+
+	span
+		transition: opacity .3s ease
+
+	&.active
+		width: 26px
+		
+		span
+			opacity: 0
+
+		$angle: 43deg
+
+		&:before
+			transform: rotate($angle)
+
+		&:after
+			transform: rotate(-$angle)
+
+.game-menu
+
+	&__container
+		position: fixed
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		background: rgba(#000a61, .95)
+		z-index: 10
+		display: flex
+		align-items: center
+		user-select: none
+
+		.wrapper
+
+.menu
+
+	li
+		color: rgba(#fff, .4)
+		transition: color .3s ease
+		cursor: pointer
+		font-size: rem(60)
+		font-weight: bold
+		line-height: 1.7
+
+		&:hover, &.active
+			color: #fff
+
+.auth
+	height: 100vh
+	display: flex
+	justify-content: flex-end
+	align-items: center
+
+	&__img
+		position: absolute
+		bottom: 0
+		left: 0
+		max-width: persent(1073, 1920)
+		max-height: 90%
+
+		img
+			display: block
+			// height: 100%
+
+		+ div
+			position: relative
+			z-index: 1
+			max-width: 35%
+
+	&__form
+
+.form-switch
+	font-weight: 900
+	font-size: rem(45)
+	letter-spacing: .01em
+	display: flex
+
+	&:before
+		content: "/"
+		color: #fff	
+		display: inline-block
+		margin: 0 8px
+
+	&__input
+
+		&-cont
+
+			&:first-child
+				order: -1
+
+	&__label
+		color: $second-color
+		cursor: pointer
+		text-decoration: none
+
+		&.current
+			color: #fff
+
+.auth-form
+	
+	&__titles
+		margin-bottom: 40px
+
+	&__input
+
+		&-cont
+
+			&:not(:first-child)
+				margin: 19px 0 0
+	
+	&__footer
+		margin: 49px 0 0
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+	&__forget-link
+		color: #fff
+		text-decoration: none
+		font-weight: 400
+		letter-spacing: .01em
+
+	&__soc
+		display: flex
+		align-items: center
+		margin: 65px 0 0
+
+		&-label
+			color: #fff
+			font-weight: 400
+			letter-spacing: .01em
+			margin-right: 34px
+
+.arrow-btn
+	// background: url("../img/ico-white-arrow.png") center right 37px no-repeat, $main-color 
+	display: inline-block
+	background: $main-color
+	border: none
+	color: #fff
+	font-size: rem(14)
+	text-transform: uppercase
+	padding: 24px 36px 20px 36px
+	box-shadow: 0px 0px 73px 0px rgba($main-color, .3);
+	transition: background-color .3s ease
+	font-weight: 500
+	letter-spacing: .03em
+	text-decoration: none
+	cursor: pointer
+	user-select: none
+	text-align: center
+
+	&:hover, &:focus
+
+		&:not(:active)
+			background-color: lighten($main-color, 10%)
+
+#panel
+	display: none !important
+
+.default
+
+	&-input
+		border: none
+		+size(100% 58px)
+		padding: 4px 32px
+
+		&--select
+			background: url("../img/ico-select-arrow.png") center right 28px no-repeat, #fff
+			background-size: 10px 5px !important
+			padding-right: 52px
+
+	&__label
+		margin-bottom: 20px
+		display: block
+
+.game__game
+	padding: 35px 0 50px
+	height: 100vh
+	display: flex
+	flex-direction: column
+
+	.wrapper
+		display: flex
+		flex-direction: column
+		flex: 1 1 auto
+		width: 100%
+
+.game__wrapper
+	background: rgba(#fff, .12)
+	flex: 1 1 auto
+	box-shadow: 0px 0px 68px 0px rgba($second-color, .35);
+	display: flex
+	position: relative
+	flex-direction: column
+
+.game
+
+	&-interface
+		flex: none
+		margin-bottom: 55px
+
+		&__top
+			display: flex
+			justify-content: space-between
+			align-items: center
+
+	&-title
+		color: #fff
+		font-weight: 900
+		letter-spacing: .01em
+		font-size: rem(36)
+
+.game-search
+	display: flex
+	flex-direction: column
+	flex: 1 1 auto
+
+	&__timer
+		position: absolute;
+		top: 0;
+		left: calc(50% - 74px);
+		transform: translate3d(0, -50%, 0);
+
+	&__player, &__opponent
+		display: flex
+		flex: 1 1 auto
+		justify-content: center
+
+	&__label
+		position: absolute
+		top: rem(70)
+		right: rem(95)
+		color: #fff
+		font-weight: 400
+		letter-spacing: .01em
+
+	&__searching
+		flex: none
+		width: 100%
+		display: flex
+		justify-content: space-between
+		align-items: center
+
+		&:before, &:after
+			content: ""
+			display: inline-block
+			flex: 1 1 auto
+			height: 2px
+			background: #55aaff
+			box-shadow: 0px 0px 18px 0px rgba(#fff, 1);
+
+.loader
+	flex: none
+	+size(70px)
+	margin: 0 rem(92)
+	display: flex
+	justify-content: center
+	align-items: center
+
+.loading
+	position: relative
+
+	&:after
+		content: ""
+		position: absolute
+		+size(100%)
+		background: url("../img/ico-loading.png") center no-repeat
+		background-size: 58px !important
+		animation: loading 1.5s linear infinite
+
+@keyframes loading
+	0%
+		transform: rotateZ(0deg)
+	100%
+		transform: rotateZ(360deg)
+
+.player
+	display: flex
+	align-items: center
+
+	&--can-edit
+
+		.player__photo
+			pointer-events: none
+			position: relative
+			overflow: visible
+
+			&:after
+				bottom: 0
+				right: 12px
+				content: ""
+				pointer-events: all
+				position: absolute
+				border-radius: 50%
+				background: url("../img/ico-edit.png") center no-repeat, #55aaff
+				+size(34px)
+				cursor: pointer
+
+	&__photo
+		flex: none
+		+size(142px)
+		display: flex
+		justify-content: center
+		align-items: center
+		background: rgba(#fff, .12)
+		border-radius: 50%
+		overflow: hidden
+
+		img
+			border-radius: 50%
+			+size(100%)
+			object:
+				fit: cover
+				position: center
+
+	&__name
+		margin-left: 40px
+		letter-spacing: .01em
+		font-size: rem(35)
+		font-weight: 900
+		line-height: lh(40, 35)
+
+		span
+			display: block
+
+img.no-photo
+	+size(64px)
+	border-radius: 0
+
+.start
+	text-align: right
+
+	&__title
+		margin-bottom: 42px
+		font-weight: 900
+		letter-spacing: .01em
+		font-size: rem(130)
+		color: #fff
+
+.profile
+	padding: 87px 97px
+	flex: 1 1 auto
+	display: flex
+	justify-content: space-between
+	flex-direction: column
+
+	&__footer
+		text-align: right
+
+.awards
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+	margin: 0 0 -35px -20px
+
+	&__one
+		text-align: center
+		display: flex
+		align-items: center
+		position: relative
+		padding-bottom: 30px
+		margin: 0 0 35px 20px
+
+		&:before, &:after
+			content: ""
+			display: inline-block
+			flex: none
+			background: url("../img/ico-crown.png") no-repeat
+			background-size: contain !important
+			+size(38px 72px)
+
+		&:before
+			transform: rotateZ(180deg) rotateX(180deg)
+
+.award
+	letter-spacing: .01em
+
+	&-number
+		font-size: rem(81)
+		font-weight: 800
+		line-height: 1
+		margin: 0 20px
+		margin-bottom: -10px
+
+	&-title
+		text-transform: uppercase
+		font-weight: 900
+		font-size: rem(14)
+		letter-spacing: .05em
+		position: absolute
+		left: 0
+		width: 100%
+		bottom: 0
+
+.edit-profile
+	display: flex
+	flex: 1 1 auto
+
+	&__left, &__right
+		display: flex
+		justify-content: space-between
+		flex-direction: column
+
+	&__left
+		width: persent(457, 946)
+		margin-right: 30px
+
+		&:after
+			content: ""
+			display: inline-block
+
+	&__right
+		width: persent(418, 946)
+
+.edit, .edit form
+	display: flex
+	flex-direction: column
+	flex: 1 1 auto
+
+.edit form
+	// justify-content: space-between
+
+input.file-input[type="file"]
+	display: none
+
+
+.edit
+	font-weight: 400
+	letter-spacing: .01em
+
+	&__input
+
+		&-cont
+			display: flex
+			flex-direction: column-reverse
+			margin-bottom: 35px
+
+			&--double
+				margin-bottom: 0
+				display: flex
+				flex-direction: row
+				justify-content: space-between
+
+				.edit__input-cont
+					width: calc(50% - 15px)
+
+	&__submit
+		margin-top: auto
+
+.date-input
+	background: url("../img/ico-calendar.png") center right 32px no-repeat, #fff
+	background-size: 16px !important
+	padding-right: 68px
+
+.file-input
+
+	&.default-input
+		background: url("../img/ico-dl.png") center right 32px no-repeat, #fff
+		background-size: 16px !important
+
+	&__cont
+		display: flex
+		flex-direction: column-reverse
+		position: relative
+
+	&__label
+		margin-bottom: 20px
+		display: block
+		pointer-events: none
+
+		&:after
+			pointer-events: all
+			content: ""
+			position: absolute
+			right: 0
+			bottom: 0
+			+size(80px 58px)
+			cursor: pointer
+
+.back-url
+	color: #fff
+	text-decoration: none
+	letter-spacing: .01em
+	position: relative
+	padding-left: 28px
+
+	&:before
+		content: ""
+		position: absolute
+		left: 0
+		background: url("../img/ico-arrow-back.png") no-repeat
+		background-size: contain !important
+		+size(5px 10px)
+		top: 3px
+
+.rating
+	// flex: 0 1 auto
+	max-height: 100%
+
+	&__title
+		text-align: center
+		display: flex
+		// justify-content: center
+		align-items: center
+		justify-content: center
+		padding: 50px 20px
+		font-weight: 900
+		letter-spacing: .01em
+		font-size: rem(33)
+		flex: none
+		position: relative
+
+		&.js__scrolled
+			padding: 20px
+
+		span
+			margin: 0 19px -5px
+
+			&:after
+				content: ""
+				+size(100% 1px)
+				background: #4374c4
+				position: absolute
+				bottom: 0
+				left: 0
+				box-shadow: 0px 0px 5px 0px rgba(#55aaff, .1)
+
+		&:before, &:after
+			content: ""
+			display: inline-block
+			flex: none
+			background: url("../img/ico-crown.png") no-repeat
+			background-size: contain !important
+			+size(24px 44px)
+
+		&:before
+			transform: rotateZ(180deg) rotateX(180deg)
+
+.rating
+
+	&__list
+		overflow-y: auto
+
+		&::-webkit-scrollbar
+			width: 8px
+
+			&-track, &-thumb
+				border-radius: 4px
+
+			&-track
+				background: rgba($second-color, .7)
+
+			&-thumb
+				background: $main-color
+	
+		table
+			width: 100%
+			counter-reset: i
+
+		tr
+			counter-increment: i
+
+			&:hover
+
+				td
+					background: $second-color
+
+			&:nth-child(n + 4)
+
+				.player-place
+
+					&__number
+						transform: scale(.8)
+
+						&:before, &:after
+							display: none
+
+						span
+							margin: 0
+
+		td
+			padding: 2rem 0
+			vertical-align: middle
+			position: relative
+			transition: background .3s ease
+
+			&:before
+				content: ""
+				+size(100% 1px)
+				background: #4374c4
+				position: absolute
+				bottom: 0
+				left: 0
+				box-shadow: 0px 0px 5px 0px rgba(#55aaff, .1)
+
+.player-place
+
+	&__number
+		display: flex
+		align-items: center
+		justify-content: center
+		text-align: center
+		padding-left: 2rem
+
+		&:before, &:after
+			content: ""
+			display: inline-block
+			flex: none
+			background: url("../img/ico-crown.png") no-repeat
+			background-size: contain !important
+			+size(13px 25px)
+
+		&:before
+			transform: rotateZ(180deg) rotateX(180deg)
+
+		span
+			margin: 0 9px -2px
+
+			&:before
+				content: counter(i)
+				display: block
+				font-weight: 900
+				letter-spacing: .01em
+				font-size: rem(23)
+
+	&__profile
+
+		.player
+
+			&__photo
+				+size(68px)
+
+			&__name
+				font-size: rem(23)
+
+				span
+					display: inline-block
+					vertical-align: bottom
+					letter-spacing: .01em
+
+					&:not(:last-child)
+						margin-right: 8px
+
+	&__points
+		padding-right: rem(95)
+		white-space: nowrap
+		font-weight: 900
+		letter-spacing: .01em
+		font-size: rem(23)
+
+.game-result
+	max-width: 810px
+	padding: rem(84) 2rem
+	width: 100%
+	box-sizing: content-box
+
+	&__cont
+		flex: 1 1 auto
+		display: flex
+		justify-content: center
+		align-items: flex-end
+
+	&__title
+		font-size: rem(70)
+		letter-spacing: .01em
+		display: flex
+		align-items: center
+		font-weight: 900
+		justify-content: center
+
+		&:not(.game-result__title--lost)
+
+			span
+				margin: 0 36px -15px
+
+			&:before, &:after
+				content: ""
+				display: inline-block
+				flex: none
+				background: url("../img/ico-crown.png") no-repeat
+				background-size: contain !important
+				+size(48px 90px)
+
+			&:before
+				transform: rotateZ(180deg) rotateX(180deg)
+
+	&__subtitle
+		text-align: center
+		margin: 25px 0 0
+		font-weight: 500
+		letter-spacing: .01em
+		font-size: rem(24)
+
+	&__btns
+		margin: 92px 0 -22px -30px
+		display: flex
+		flex-wrap: wrap
+
+.red-btn, .white-btn, .green-btn
+	width: calc((100% - 30px * 2) / 2)
+	height: 63px
+	margin: 0 0 22px 30px
+	display: flex
+	justify-content: center
+	align-items: center
+	color: #fff
+	text-decoration: none
+	text-transform: uppercase
+	letter-spacing: .05em
+	font-weight: 500
+	font-size: rem(14)
+	cursor: pointer
+	user-select: none
+
+	&:after
+		content: ""
+		display: inline-block
+		background-size: contain !important
+
+.red-btn
+	background: $main-color
+	box-shadow: 0 0 73px 0 rgba($main-color, .3)
+
+	&--close
+
+		&:after
+			background: url("../img/ico-close.png") no-repeat
+			+size(16px)
+			margin-left: 19px
+
+.white-btn
+	background: rgba(#e8e8e8, .21)
+	// box-shadow: 0 0 73px 0 rgba(rgba($main-color, .2), .21)
+
+	&--rating
+
+		&:after
+			background: url("../img/ico-rating.png") no-repeat
+			+size(19px 21px)
+			margin-left: 17px
+
+	&--share
+		position: relative
+
+		&:after
+			background: url("../img/ico-share.png") no-repeat
+			+size(20px)
+			margin-left: 21px
+
+.green-btn
+	background: #30a643
+	box-shadow: 0 0 73px 0 rgba(#30a643, .3)
+
+	&--play
+
+		&:after
+			margin-left: 22px
+			background: url("../img/ico-update.png") no-repeat
+			+size(22px 20px)	
+
+.share
+	position: absolute
+	bottom: calc(100% + 15px)
+	left: 50%
+	transform: translate3d(-50%, 50%, 0)
+	background: $second-color
+	border-radius: 8px
+	padding: 10px
+	box-shadow: 0 0 12px 0 rgba($second-color, .6)
+
+	&:after
+		content: ""
+		position: absolute
+		+triangle(12px, $second-color, down)
+		top: calc(100%)
+		left: calc(50% - 6px)
+
+.game-filed
+	max-width: 945px
+	width: 100%
+
+	&__cont
+		flex: 1 1 auto
+		padding: 2rem
+		display: flex
+		justify-content: center
+		align-items: center
+
+	&__timer
+		display: none
+
+	&__players
+		margin-bottom: rem(40)
+
+	&__counter
+		margin-bottom: rem(35)
+
+.game-players
+	display: flex
+	justify-content: space-between
+
+	.player
+
+		&__photo
+			+size(113px)
+
+		&__name
+			font-size: rem(23)
+			margin-left: 2rem
+
+		&__points
+			margin-left: rem(66)
+			position: relative
+			font-weight: 900
+			font-size: rem(35)
+			line-height: 1
+			letter-spacing: .01em
+
+			&:before
+				content: ""
+				background: #fff
+				+size(25px 1px)
+				position: absolute
+				right: calc(100% + 19px)
+				top: calc(50% - 1px)
+
+
+	&__two
+
+		.player
+			flex-direction: row-reverse
+
+			&__name
+				margin-left: 0
+				margin-right: rem(23)
+
+			&__points
+				margin-left: 0
+				margin-right: rem(66)
+
+				&:before
+					right: auto
+					left: calc(100% + 19px)
+
+.game-counter
+	display: flex
+	align-items: center
+
+	&__field
+		flex: 1 1 auto
+		background: rgba(#fff, .26)
+		height: 7px
+		border-radius: 5px
+
+		span
+			height: inherit
+			display: block
+			border-radius: inherit
+			background: #53a7fc
+			box-shadow: 0 0 16px 0 rgba(#55aaff, .33)
+
+	&__numbers
+		flex: none
+		font-weight: 400
+		letter-spacing: .01em
+		white-space: nowrap
+		margin-left: 2rem
+
+.question
+	text-align: center
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+
+	&__answers
+		width: 100%
+
+		&:nth-child(3)
+			margin: 20px 0 0
+
+	&__text
+		font-weight: 900
+		letter-spacing: .01em
+		font-size: rem(24)
+		margin-bottom: rem(28)
+
+		&:first-child
+			width: 100%
+
+		&:not(:first-child)
+			width: calc(70% - 30px)
+			text-align: left
+
+	&__img
+		// margin-bottom: 30px
+		text-align: left
+		width: 30%
+		margin-right: 30px
+
+.q-img
+	display: inline-block
+	position: relative
+	
+	img
+		max-height: 125px
+
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		right: 0
+		+size(35px)
+		background: url("../img/ico-search.svg") center no-repeat, rgba(#000, .3)
+
+.answers
+	display: flex
+	flex-wrap: wrap
+	margin: 0 0 -2rem -4rem
+
+	&__one
+		width: calc((100% - 4rem * 2) / 2)
+		margin: 0 0 2rem 4rem
+
+.answer
+	background: #192279
+	padding: 0 26px
+	min-height: 77px
+	display: flex
+	justify-content: center
+	align-items: center
+	cursor: pointer
+	transition: background .3s ease, box-shadow .3s ease
+
+	&--false
+		background: $main-color
+		box-shadow: 0 0 73px 0 rgba($main-color, .3)
+
+	&--true
+		background: #30a643
+		box-shadow: 0 0 73px 0 rgba(#30a643, .3)
+
+	&--opponent, &--player
+		position: relative
+
+		&:before, &:after
+			background: url("../img/ico-selected-answer.png") no-repeat
+			+size(25px)
+			top: calc(50% - 13px)
+			position: absolute
+
+	&--opponent
+
+		&:after
+			content: ""
+			right: 25px
+
+	&--player
+
+		&:before
+			content: ""
+			left: 25px
+
+.ui
+
+	&-resizable
+	
+		&-s, &-se
+			display: none !important
+
+	&-datepicker
+		border-radius: 0
+		border: 1px solid $border-color
+
+.ui-widget.ui-widget-content
+	border-radius: 0
+	border: 1px solid $border-color
+	margin: -1px 0 0
+
+.ui-widget
+	font-family: $default-font
+
+select.ui-datepicker
+
+	&-month, &-year
+		padding: 5px 20px 5px 10px
+		border: 1px solid $border-color
+		background: url("../img/ico-select-arrow.png") right 10px center no-repeat, #fff
+		background-size: 10px 5px !important
+		-webkit-appearance: none
+		appearance: none
+
+		&:not(:last-child)
+			margin-right: 15px
+
+
+.ui-datepicker
+
+	&-header
+		border-radius: 0
+		border: none
+		background: #fff
+		color: #000
+		font-weight: 400
+		margin: -.2em -.2em 0 
+
+	&-title
+		font-size: 15px
+		// color: #fff
+
+	&-prev, &-next
+		// border: 1px solid transparent
+		border: none !important
+
+		&-hover
+			top: 2px !important
+			// background: darken(#fff, 7%) !important
+			background: none !important
+			cursor: pointer
+
+	&-prev
+
+		&-hover
+			left: 2px !important
+			// top: 2px !important
+
+	&-next
+		right: 2px !important
+		// top: 2px !important
+
+	&-calendar
+
+		th
+			font-weight: 400
+			font-size: 14px
+			color: rgba(#fff, .35)
+
+		.ui-state
+
+			&-default
+				background: none
+				border: none !important
+				color: #fff
+				font-weight: 400 !important
+				font-size: 14px
+				text-align: center
+
+			&-highlight
+				background: #fbec88
+
+			&-hover
+				background: darken($second-color, 7%)
+				color: #fff
+
+			&-active
+				background: $second-color
+				color: #fff
+
+		td
+
+			&.active
+				background: $second-color
+
+#ui-datepicker-div
+	box-shadow: $shadow
+	background: #3848aa
+	border-radius: 15px
+	border: none
+	overflow: hidden
+
+.ui-widget
+
+	&-header
+
+		.ui
+
+			&-icon
+				+size(16px)
+				border-radius: 50%
+				background: $main-color
+				position: relative
+
+				&:after
+					content: ""
+					position: absolute
+					top: calc(50% - 3px)
+					left: calc(50% - 3px)
+					+triangle(6px 5px, #fff, left)
+
+				&-circle-triangle-e
+					transform: rotate(180deg)
+
+			&-state
+
+				&-hover
+					border-radius: 0
+
+.ui-menu
+	margin: -1px 0 0
+	transform: translateY(-1px)
+
+	.ui-menu
+
+		&-item
+			font-size: 14px
+			font-weight: 400
+
+			&-wrapper
+				padding: 5px 17px
+
+	.ui-state
+
+		&-default
+			background: none !important
+			border: none !important !important
+			color: #000 !important
+			font-weight: 400 !important !important
+			font-size: 14px !important
+			text-align: center !important
+
+		&-highlight
+			background: #fbec88 !important
+
+		&-hover
+			background: darken($second-color, 7%) !important
+
+		&-active
+			background: $second-color !important
+			border-color: transparent !important
+			color: #000 !important
+			font-weight: 400
+
+.question-list
+	margin: 20px 0 0
+
+	td
+		border: 1px solid rgba($second-color, .5)
+		padding: 10px 15px
+
+		&:last-child[rowspan="2"]
+			vertical-align: middle
+
+	.hr
+
+		td
+			background: rgba($second-color, .5)
+
+.head-tr-question
+
+	td
+		white-space: nowrap
+
+.paginator
+	margin: 2rem 0 
+	display: flex
+	justify-content: center
+	align-items: center
+
+	li
+		display: inline-block
+		color: $main-color
+		font-weight: bold
+
+		&:not(:last-child)
+			margin-right: 10px
+
+	a
+		color: #fff
+		text-decoration: none
+		font-weight: 300
+
+	.arrow
+
+		a
+			display: block
+			background: url("../img/right-arrow.svg") center no-repeat
+			background-size: contain !important
+			+size(15px)
+
+		&:first-child
+			transform: rotate(180deg)
+			margin-bottom: 0
+
+
+.link-delete
+	overflow: hidden
+	display: block
+	text-indent: -9999px
+	background: url("../img/delete.svg") no-repeat
+	background-size: contain !important
+	+size(20px)
+
+.add-question
+	position: fixed
+	left: 20px
+	bottom: 20px
+	background: $main-color
+	color: #fff
+	text-decoration: none
+	display: block
+	padding: 10px 15px
+
+	&:hover, &:focus
+
+		&:not(:active)
+			background: lighten($main-color, 5%)
+
+#addQuestionForm
+	color: #000
+	margin: 0
+	padding: 20px 35px
+	max-width: 700px
+
+	.title
+		font-size: rem(26)
+		margin-bottom: 25px
+
+	.question
+		margin-bottom: 18px
+
+	input[type="submit"]
+		background: $main-color
+		color: #fff
+		text-decoration: none
+		display: inline-block
+		padding: 10px 15px 12px
+		margin: 25px 0 0
+		border: none
+
+		&:hover, &:focus
+
+			&:not(:active)
+				background: lighten($main-color, 5%)
+
+.var-item
+	text-align: left
+	display: flex
+	flex-direction: column
+
+	label
+		margin-bottom: 10px
+
+	textarea, input[type="text"]
+		padding: 5px 10px
+		border: 1px solid $border-color
+		appearance: none
+		border-radius: 0
+
+	textarea
+		min-height: 120px
+
+.wrapper-answer
+	display: flex
+	flex-wrap: wrap
+	margin: 0 0 -1rem -1rem
+
+	.variant
+		width: calc((100% - 1rem * 2) / 2)
+		margin: 0 0 1rem 1rem
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+
+		.var-item
+			margin-bottom: 10px
+
+			&:first-child
+				width: 100%
+
+			&:not(:first-child)
+				flex-direction: row
+				align-items: center
+
+				label
+					margin-bottom: 0
+					margin-right: 10px
+
+.rating-place
+	color: #fff
+	background: #c21616
+	width: 52px
+	height: 52px
+	border-radius: 50%
+	display: flex
+	justify-content: center
+	align-items: center
+	position: absolute
+	top: -4px
+	right: -24px
+	font-weight: 900
+	font-size: 14px
+	letter-spacing: .01em
+
+	&.first-pos
+
+		span
+			margin: 0 3px
+
+		&:after, &:before
+			content: "";
+			display: inline-block;
+			flex: none;
+			background: url(../img/ico-crown.png) no-repeat;
+			background-size: contain!important;
+			height: 19px;
+			width: 8px;
+
+		&:before
+			transform: rotateZ(180deg) rotateX(180deg);
+
+.player__photo-cont
+	position: relative
+
+.ok-message
+
+	.notetext
+		color: #fff
+
+@import "media"

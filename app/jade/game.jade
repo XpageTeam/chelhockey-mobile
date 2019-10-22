@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Игра
+		include inc/head.jade
+		include inc/css.jade
+	body.main
+		#app
+			.game__cont(style="background-image: url('img/auth-register-bg.jpg')")
+				.game
+					.game__game
+						.wrapper
+							.game-interface
+								.game-interface__top
+									h1.game-title Название игры
+									.game__links
+										a.exit-link(href="#" title="Выход") Выход
+								.game-interface__middle
+							.game__wrapper
+								.game-filed__cont
+									.game-filed
+										.game-filed__timer
+											.timer
+												span.timer__text 10
+												canvas.timer__canvas#timer(width="145" height="145")
+										.game-filed__players
+											.game-players
+												.game-players__one
+													.player
+														figure.player__photo
+															img(src="img/photos/player-photo.jpg")
+														.player__name
+															span Иван
+															span Иванов
+														.player__points 7
+												.game-players__two
+													.player
+														figure.player__photo
+															img(src="img/photos/player-photo.jpg")
+														.player__name
+															span Иван
+															span Иванов
+														.player__points 9
+										.game-filed__counter
+											.game-counter
+												.game-counter__field
+													span(style="width: 50%")
+												.game-counter__numbers 16 / 25
+										.game-filed__question
+											.question
+												.question__text Как расшифровывается аббревиатура КХЛ?
+												.question__answers
+													.answers
+														each title in ["Кондитерская хоккейная лига", "Канадская хоккейная лига", "Континентальная хоккейная лига", "Криминальная хоккейная лига"]
+															.answers__one
+																if (title == "Континентальная хоккейная лига")
+																	.answer.answer--true=title
+																else if (title == "Криминальная хоккейная лига")
+																	.answer.answer--false=title
+																else
+																	.answer=title
+		include inc/scripts.jade

@@ -1,0 +1,30 @@
+.loader
+	.loader-img__cont
+		.loader-img
+			.loader-img__left
+				i
+			.loader-img__center
+				i
+			.loader-img__right
+				i
+header.head
+	.head-top
+		.head__logo
+			a.logo(href="#")
+				//- img(src="img/logo-white.png", alt="")
+				include logo.svg
+		.head__city
+			form(action="#")
+				select.city.selectize
+					option Челябинск
+					option Копейск
+		nav.head__menu
+			ul.menu
+				li
+					a.menu__link.active(href="#") Купить
+				each title in ["Продать", "Арендовать", "Новые проекты", ]
+					li
+						a.menu__link(href="#")=title
+		.head__burger
+			.burger
+				span

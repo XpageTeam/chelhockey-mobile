@@ -1,0 +1,1289 @@
+@import "bourbon"
+@import "vars"
+$output-bourbon-deprecation-warnings: false;
+
+@media screen and (min-width: 840px)
+	.page-game
+
+		.game-title
+			margin: 
+				left: 20px
+				right: auto
+
+	.game-filed__timer
+		top: -73px
+
+@media screen and (min-height: 1000px)
+	.edit-profile
+		flex: none
+
+	.profile
+		justify-content: center
+
+		&__top, &__middle
+			margin-bottom: auto
+
+@media screen and (max-height: 880px)
+	.game
+
+		&__game
+			padding: 8px 0
+
+		&__cont, &__game
+			min-height: 660px
+
+	.profile
+		padding: 40px
+
+@media (max-height: 830px)
+	.game-interface
+		margin-bottom: 10px
+		z-index: 2
+
+@media screen and (max-height: 720px)
+	.game-interface
+		// margin-bottom: 40px
+
+	.edit__input
+
+		&-cont
+			margin-bottom: 15px
+
+	.default
+
+		&__label
+			margin-bottom: 7px
+
+	.auth
+		align-items: flex-start
+		padding: 20px 0
+
+		&-form
+
+			&__titles
+				margin-bottom: 10px
+
+			&__footer
+				margin: 30px 0 0
+
+	.game__wrap
+		height: 100vh
+
+@media screen and (min-height: 1000px)
+	.game-result
+
+		&__cont
+			align-items: center
+
+@media screen and (max-width: 1300px)
+	.profile
+		padding: 40px
+
+	.awards
+		flex-wrap: wrap
+		justify-content: flex-start
+		margin: 0 0 -20px -20px
+
+		&__one
+			margin: 0 0 20px 20px
+
+@Media screen and (max-width: 1204px)
+	.game__game 
+
+		.wrapper
+			box-sizing: border-box
+
+	.game-search
+
+		&__label
+			top: 1.375rem
+			right: 1.9375rem
+
+@media screen and (max-width: 1100px)
+	.question
+
+		&__img
+			width: 25%
+
+		&__text
+
+			&:not(:first-child)
+				width: calc(75% - 30px)
+
+@media screen and (max-width: 1000px)
+	.wrapper
+		max-width: 800px
+
+	.auth
+
+		&__img
+			img
+				display: none
+
+		&__form, &__start
+			width: 100%
+			max-width: none !important
+
+	.start
+		text-align: center
+
+		&__title
+			font-size: rem(42)
+
+	.game
+
+		&__game
+			padding: 40px 0
+
+	.game-interface
+		margin-bottom: 40px
+
+	.edit-profile
+
+		&__left
+			flex: none
+			width: 40%
+
+		.player
+			flex-direction: column
+
+			&__name
+				margin: 20px 0 0
+				text-align: center
+
+		&__right
+			width: auto
+			flex: 1 1 auto
+	
+	.rating
+
+		&__title
+			padding: 30px 20px
+
+		&__list
+
+			td
+				padding: 1rem 0
+
+	.player-place
+
+		&__number,
+		&__points
+			padding: 0 20px
+
+	.game-filed
+		display: flex
+		flex-direction: column
+
+		&__cont
+			padding: 20px
+			// align-items: stretch
+
+		&__counter
+			// padding-bottom: 3rem
+			// margin-bottom: auto
+
+		&__question
+			flex: 1 1 auto
+			display: flex
+
+	.question
+		width: 100%
+
+	.game-players
+		justify-content: center
+		align-items: center
+
+		&:before
+			content: ":"
+			font-weight: 900
+			font-size: rem(50)
+			margin: 0 10px
+
+		&__one
+			order: -1
+
+		&__two
+
+			.player
+				flex-direction: row-reverse
+
+				&__points
+					margin: 0 4.125rem 0 0
+
+					&:before
+						right: auto
+						left: calc(100% + 19px)
+
+		.player
+
+			&__photo
+
+			&__name
+				margin-left: 0
+				display: none
+
+				span
+					display: inline-block
+
+					&:not(:last-child)
+						margin-right: 8px
+
+@media screen and (max-width: 1000px) and (min-width: 660px)
+	.edit
+
+		&__input
+
+			&-cont
+
+				&--double
+					flex-direction: column
+
+					.edit__input-cont
+						width: 100%
+
+@media screen and (max-width: 660px)
+	html
+		font-size: 95%
+
+
+	
+	.game__wrap
+		height: 100vh
+		background-position: 20% 50%
+
+	.game__auth
+		background: url('../img/auth-game-bg.jpg') no-repeat center
+		background-size: cover
+
+		.soc__link img
+			width: 18px
+
+	.auth
+		height: 100vh !important
+		flex-direction: column
+
+		&__form
+			margin: auto 0
+
+		.default-input
+			border-radius: 5px !important
+
+		&__img
+			max-width: 216px
+			height: 48px
+			width: 100%
+			margin: 25px auto 0
+			position: relative
+			background-image: url("/bitrix/templates/game/img/main-log.png") 
+			background-repeat: no-repeat 
+			background-position: center
+			background-size: contain
+
+
+	form[action="/usergame/?login=yes"]
+
+		.auth
+			&-form__footer
+				margin: 25px 0 0 -16px 
+				flex-direction: row
+
+				.auth-form__footer-submit, .auth-form__footer-forget
+					width: calc((100% - 16px * 2) / 2)
+					margin: 0 0 0 16px
+
+				.arrow-btn
+					width: 100%
+					border-radius: 5px !important
+
+				.auth-form__forget-link
+					width: 100%
+					display: inline-block
+					padding: 21px 4px 20px
+					background: rgba(255, 255, 255, 0.2)
+					border-radius: 5px
+					text-align: center
+			// auth-form__footer-forget
+
+	form[action*="/usergame/?register"]
+
+		.g-recaptcha
+			display: flex
+			justify-content: center
+
+		.auth-form__footer-submit
+			width: 100%
+
+		.arrow-btn
+			width: 100%
+			border-radius: 5px !important
+			text-align: center
+
+		.auth-form__footer
+			margin: 20px 0 0
+
+		.auth-form__soc-label
+			margin-right: 25px
+
+
+	.main-logo
+		max-width: 216px
+		margin: 0 auto
+
+	.game
+
+		.game-interface__top
+			padding: 35px 16px
+
+		.game-menu
+			width: auto
+			height: auto
+
+
+		.game-menu, .game__links
+			position: relative
+
+		&__wrapper
+			margin: 16px
+			border-radius: 5px
+
+
+	.exit-link
+		background: url("../img/ico-exit.svg") center no-repeat !important
+		background-size: none !important
+
+
+
+	.default-input
+		padding: 4px 10px
+
+		&--select
+			padding-right: 20px
+			background-position: center right 10px !important
+
+	.date-input,
+	.file-input.default-input
+		background-position: center right 12px !important
+
+
+	.wrapper
+		padding: 0 18px
+
+	.form-switch
+		font-size: rem(24)
+		justify-content: center
+
+	.auth-form
+
+		&__titles
+			margin-bottom: 20px
+
+		&__input
+
+			&-cont
+
+				&:not(:first-child)
+					margin: 10px 0 0
+
+		&__soc
+			margin: 30px 0 0
+			justify-content: center
+	
+	.game
+
+		&__game
+			padding: 20px 0
+			height: auto
+
+	.game-interface
+		margin-bottom: 20px
+
+	.rating
+
+		&__title
+			padding: 20px 18px
+
+		&__list
+
+			table, tbody, td
+				// display: block
+
+			tr
+				// position: relative
+				// display: flex
+				// align-items: center
+				// flex-direction: column
+				// padding: 0 18px
+
+			td
+				// position: static
+
+			.player
+				// flex-direction: column
+
+				&__name
+					margin: 0 0 0 10px
+
+					span
+						display: block
+
+	// .player-place
+		
+	// 	&__number
+	// 		padding: 0 18px
+
+	// 		span
+	// 			margin: 0 5px 1px
+
+	// 			&:before
+	// 				font-size: rem(18)
+
+	// 		&:before, &:after
+	// 			width: 10px
+
+	.red-btn, .white-btn, .green-btn
+		margin: 0 0 15px 0
+		width: 100%
+
+	.game-filed
+
+		&__cont
+			align-items: flex-start
+
+		&__question
+
+		&__players
+			margin-bottom: 1rem
+	
+	.question
+
+		&__answers
+			position: fixed
+			left: 0
+			right: 0
+			bottom: 0
+			background: $second-color
+			padding: 20px 18px
+
+	.answers
+		margin-left: 0
+		justify-content: space-between
+		margin-bottom: -15px
+
+		&__one
+			width: 48%
+			margin-left: 0
+			margin-bottom: 15px
+
+@media screen and (max-width: 840px) and (orientation: landscape), (max-width: 660px) and (orientation: portrait)
+	.profile
+		padding: 18px
+
+		&__footer
+			margin-top: auto
+			text-align: center
+
+		&__middle
+			margin: 30px 0 0
+
+	.game__cont, .game__game
+		min-height: 0
+
+
+	
+	.confirm-popup
+		top: 0 !important
+		left: 0 !important
+		right: 0
+		bottom: 0
+		border-radius: 0 !important
+		transform: none !important
+		padding-top: 6rem !important
+
+		div.timer
+			// position: static !important
+			bottom: auto !important
+			top: -25px !important
+			transform: scale(.7)
+
+	.answer
+		font-size: rem(13)
+		min-height: 50px
+
+		&--player
+
+			&:before
+				left: 0px
+				transform: scale(.4)
+
+		&--opponent
+
+			&:after
+				right: 0px
+				transform: scale(.4)
+
+	.game-filed__players
+
+		.rating-place
+			transform: scale(.6)
+			top: -15px
+
+	.game
+
+		&__wrapper
+			padding: 40px 0 0
+
+		&__game
+			padding: 0 !important
+
+			.wrapper
+				padding: 0
+
+		&-interface
+			margin: 0
+
+			&__top
+				padding: 0 18px
+
+		&-field__players
+
+		&-menu
+			left: 0
+			display: flex
+			justify-content: center
+			align-items: center
+
+			&__container
+				overflow: auto
+				align-items: flex-start
+				padding: 40px 0 0
+
+				.wrapper
+					padding: 0 11px
+
+		&__links, &-menu
+			position: fixed
+			top: 0			
+			+size(50px)
+			z-index: 3
+
+		&-title
+			display: none
+
+		&__links
+			right: 0
+
+			.exit-link
+				+size(100%)
+				border-radius: 0
+
+	.game__wrap
+		min-height: 0
+
+	.menu
+
+		li
+			font-size: rem(26)
+
+	.game-result
+		padding: 22px 18px
+
+		&__cont
+			align-items: flex-start
+
+		&__subtitle
+			font-size: rem(18)
+
+		&__title
+			font-size: rem(30)
+
+			&:not(.game-result__title--lost)
+
+				&:before, &:after
+					+size(20px 40px)
+
+				span
+					margin: 0 11px -6px 11px
+
+		&__btns
+			margin: 30px 0 -15px
+
+	.red-btn, .white-btn, .green-btn
+		height: 45px
+
+	.awards
+		margin: 0
+		// align-items: center
+		// flex-direction: column
+		justify-content: center
+		flex-wrap: nowrap
+
+		&__one
+			// width: 100%
+			margin: 0 10px 15px
+			padding-bottom: 5px
+
+
+
+			&:before, &:after
+				// display: none
+				+size(25px 57px)
+
+			&:not(:first-child)
+				// margin: 15px 0 0
+	
+	.award
+		// display: flex
+		// align-items: center
+
+		&:after
+			// content: ""
+			+size(15px 1px)
+			background: #fff
+			display: inline-block
+			order: -1
+			margin: 0 20px
+
+		&-title
+			// width: auto
+			// position: static
+
+		&-number
+			font-size: rem(48)
+			margin: 0 10px
+			order: -2
+
+	.answer
+		padding: 10px 20px
+
+	.game-players
+		// justify-content: space-between
+
+		&:before
+			font-size: rem(25)
+			margin-bottom: 5px
+
+		.player
+
+			&__photo
+				+size(60px)
+
+			&__points
+				margin-left: 30px
+				font-size: rem(26)
+
+				&:before
+					width: 10px
+					right: calc(100% + 10px)
+
+		&__two
+
+			.player
+
+				&__points
+					margin-left: 0
+					margin-right: 30px
+
+					&:before
+						right: auto
+						left: calc(100% + 10px)
+
+	.question
+
+		&__text
+			font-size: 1rem !important
+
+	.game-counter
+
+	.page-game
+
+		.game
+
+			&__wrapper
+				padding-top: 0 !important
+
+		.game-interface
+			display: none !important
+
+	.timer
+
+		&__text
+			display: block !important
+			line-height: 142px
+
+// @media screen and (max-width: 1000px) and (orientation: landscape)
+	// #app
+	// 	opacity: 0
+
+	// body
+	// 	background: url('../img/rotating-phone-from-vertical-to-horizontal-position.svg') no-repeat center
+	// 	background-size: 30%
+
+
+
+@media screen and (max-width: 660px) and (orientation: portrait)
+	.wrapper
+		max-width: 480px
+
+	.game-search
+
+		&__player
+			padding: 0 15px
+
+	.question
+
+		&__text
+			order: -1
+			width: 100% !important
+			text-align: center !important
+
+		&__img
+			width: 100%
+			text-align: center
+			margin-right: 0 !important
+
+
+	.edit-profile
+		flex-direction: column
+
+		&__left
+			width: auto
+			margin-right: 0
+
+		&__user
+			margin: 20px 0
+
+			.player
+				flex-direction: row
+				align-items: center
+
+				&__name
+					margin: 0 0 0 25px
+					text-align: left
+
+	.player
+		justify-content: center
+
+		&__photo
+			+size(110px)
+
+		&__name
+			margin-left: rem(60)
+			font-size: rem(28)
+
+	.award
+		&-number
+			font-size: rem(24)
+
+		&-title
+			font-size: rem(16)
+			text-transform: none
+			font-weight: 300
+
+	.find_bug_link
+		display: none
+
+
+	.arrow-btn
+		box-shadow: none
+		width: 100%
+		border-radius: 5px !important
+		padding: 20px 36px
+
+	.player-place
+
+		&__points
+			padding: 0 10px
+			font-size: rem(16)
+
+		&__number
+			padding: 0 10px
+
+			&:before, &:after
+				display: none
+
+		&__profile
+
+			.player
+
+				&__photo
+					+size(47px)
+
+				&__name
+					font-size: rem(16)
+					word-break: break-all
+
+	.loader
+		margin: 0 2rem
+
+
+	.game
+
+		&__game
+			padding: 20px 0
+
+		&__cont, &__game
+			min-height: 0
+			height: 100%
+
+		&__wrapper
+			padding: 0
+
+	#app, html, body, .game, .auth
+		height: 100%
+		min-height: 0
+
+	.rating-place
+		+size(56px)
+		right: -15px
+
+	.profile
+
+		.player
+
+			&__photo
+				+size(120px)
+
+				&:after
+					right: -15px
+
+			&__name
+				font-size: rem(20)
+
+		.rating-place
+			transform: scale(.7)
+			top: -20px
+
+		&__top
+
+			&-player
+
+
+
+		&__middle
+			margin: auto 0
+
+	.file-input, .default-input
+		border-radius: 5px !important
+		height: 56px
+
+	.rating
+		.player
+			justify-content: flex-start
+
+
+		&__title
+
+			span:after
+				background: #5F6ABD
+
+		&__list td:before
+			background: #5F6ABD
+
+	.game-menu__container
+		padding: 95px 0 0
+
+	.player-place__profile 
+		.player__photo
+			height: 59px
+			width: 59px
+		.player__name
+			font-size: 16px
+			font-weight: 300
+
+	.player-place__number span:before
+		font-weight: 500
+		font-size: 20px
+
+
+
+	.game-search
+
+		&__label
+			top: auto
+			left: 1rem
+			right: 1rem
+			text-align: center
+			bottom: 15px
+
+		&__timer
+			top: calc(50% + 22px)
+
+		&__searching
+
+			&:before
+				background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,0.02) 1%,#5af 62%,#5af 97%,#5af 100%)
+
+			&:after
+				background: linear-gradient(to right,#5af 0,#5af 1%,rgba(85, 170, 255, 0.46) 42%,rgba(85, 170, 255, 0.03) 100%)
+
+			.loader
+				// opacity: 0
+
+	.game-filed
+		padding-top: 60px
+
+		&__timer
+			// position: relative
+			top: -30px !important
+			transform: translate3d(-50%, 0, 0) scale(.7) !important
+
+@media screen and (max-width: 840px) and (orientation: landscape)
+	html, .game__body
+		height: 100% !important
+
+	.game
+
+		&__body
+
+			.game
+
+				&__game .wrapper, &__wrapper, &-field__cont
+					height: 100%
+
+	.game-filed
+		padding-top: 40px
+
+		&__timer
+			left: 29% !important
+			top: -35px !important
+			transform: translate3d(-50%, 0, 0) scale(.5) !important
+
+	.game
+
+		&__game
+			padding: 20px 0
+
+		&__cont, &__game
+			min-height: 0
+			height: 100%
+
+		&__auth
+			padding: 20px 0
+
+	.auth
+		align-items: flex-start
+
+		&-form
+
+			&__titles
+				margin-bottom: 10px
+
+			&__footer
+				margin: 20px 0 0
+
+			&__soc
+				margin: 10px 0 0
+
+	.default-input
+		height: 45px
+
+	.arrow-btn
+		padding: 15px 80px 12px 36px
+
+	.form-switch
+		font-size: rem(26)
+
+	.game-result
+		flex: 1 1 auto
+		box-sizing: border-box
+		display: flex
+		flex-direction: column
+		max-width: none
+
+		&__cont
+			flex-direction: column
+			align-items: flex-end
+
+		&__subtitle
+			margin: 10px 0 0
+
+		&__btns
+			padding-top: 10px
+			margin-top: auto
+			justify-content: space-between
+
+	.red-btn, .white-btn, .green-btn
+		margin-left: 0
+		width: calc(50% - 15px)
+
+	#app, html, body, .game, .auth
+		height: 100%
+		min-height: 0
+
+	.game-interface
+		// margin-bottom: 20px
+
+	.game-search
+		flex-direction: row
+		margin: -40px 0 0
+
+		&__player, &__opponent
+			width: 48%
+
+		&__player
+
+			.player
+				flex-direction: column
+				justify-content: center
+
+				&__photo
+					+size(100px)
+
+				&__name
+					margin: 20px 0 0
+					text-align: center
+					font-size: rem(24)
+
+		&__searching
+			flex-direction: column
+			width: auto
+			width: 4%
+
+			&:before, &:after
+				height: auto
+				width: 2px
+
+			.loader
+				// opacity: 0
+
+		&__timer
+			top: 50%
+		
+		&__opponent
+
+			.player
+
+				&__photo
+					+size(120px)
+
+	.loader
+		margin: 2rem 0
+
+	.profile
+		flex-direction: row
+		justify-content: flex-start
+		flex-wrap: wrap
+
+		&__top
+
+			.player
+
+				&__photo
+					+size(110px)
+
+		&__middle
+			margin: 0 0 0 20px
+	
+	.awards
+
+		&__one
+			width: 100%
+			margin: 0
+			padding-bottom: 0
+
+			&:before, &:after
+				display: none
+				// width: 32px
+
+			&:not(:first-child)
+				margin: 5px 0 0
+	
+	.award
+		display: flex
+		align-items: center
+
+		&:after
+			content: ""
+			+size(15px 1px)
+			background: #fff
+			display: inline-block
+			order: -1
+			margin: 0 20px
+
+		&-title
+			width: auto
+			position: static
+
+		&-number
+			font-size: rem(48)
+			margin: 0 10px
+			order: -2
+
+	@supports (display: grid)
+		.profile
+			padding: 30px 40px
+			display: grid
+			grid-gap: 20px
+			grid-template-columns: 1fr auto
+			// grid-template-rows: 1fr 1fr
+			grid-template-areas: "profile stats" "btn stats"
+
+			&__top
+				grid-area: profile
+
+			&__middle
+				grid-area: stats
+				margin: 0
+				display: flex
+				align-items: center
+
+			&__footer
+				grid-area: btn
+				text-align: left
+	
+	.game-filed
+		flex-direction: column
+		align-items: center
+		width: 53%
+
+		&__cont
+			align-items: flex-start
+			justify-content: flex-start
+			padding: 18px 16px
+
+		// &__timer, &__players, &__counter
+			// width: 48%
+
+		&__players
+			// position: fixed
+			top: 12px
+			right: 90px
+			margin-bottom: 1rem
+
+		&__counter
+			width: 100%
+			margin-bottom: 1rem
+
+	.question
+
+		&__answers
+			bottom: 0
+			position: fixed
+			right: 0
+			width: 45%
+			top: 0
+			background: $second-color
+			padding: 18px
+			// align-items: center
+			display: flex
+			flex-direction: column
+			justify-content: center
+			left: auto
+
+		&__text
+			font-size: rem(20)
+			margin-bottom: 0
+
+	.answers
+		margin-left: 0
+		// justify-content: space-between
+
+		&__one
+			width: 100%
+			margin-left: 0
+
+			&:not(:last-child)
+				margin-bottom: 15px
+
+	.answer
+		height: auto
+		min-height: 0
+		padding: 8px 10px
+
+@media screen and (max-width: 670px) and (orientation: landscape)
+	
+	@supports (display: grid)
+		.profile
+			padding: 20px
+
+@media screen and (max-width: 400px)
+	
+	.awards
+		margin: 0
+		flex-wrap: wrap
+		margin-bottom: -30px
+
+		&__one
+			width: 50%
+			margin: 0
+			margin-bottom: 30px
+			justify-content: center
+
+@media screen and (max-width: 370px)
+	html
+		font-size: 93%
+
+	form[action="/usergame/?login=yes"]
+
+		.auth
+			&-form__footer
+
+				.auth-form__footer-submit, .auth-form__footer-forget
+					width: auto
+
+				.auth-form__forget-link
+					padding: 14px 16px 12px
+					text-transform: none
+					font-size: rem(13)
+
+
+	.arrow-btn
+		padding: 14px 16px 12px
+		text-transform: none
+		font-size: rem(13)
+
+	.g-recaptcha
+		display: flex
+		justify-content: center
+
+	.arrow-btn
+		width: 100%
+		text-align: left
+		display: block
+
+	.auth-form
+
+		&__footer
+			flex-direction: column
+			align-items: flex-start
+
+			&-submit, &-forget
+				width: 100%
+
+				&:not(:first-child)
+					margin: 15px 0 0
+
+		&__soc
+			flex-direction: column
+			align-items: flex-start
+
+			.soc
+				margin: 15px 0 0
+
+	.game-filed
+
+		&__cont
+			padding: 15px
+
+		&__counter
+			margin-bottom: 1rem
+
+	.question
+
+		&__text
+			font-size: rem(24)
+
+	.edit__input-cont
+		margin-bottom: 10px
+
+		&--double .edit__input-cont
+			margin-bottom: 0 !important
+			width: calc(50% - 4px)
+
+	.edit-profile
+
+		.arrow-btn
+			padding: 12px 20px 10px !important
+			background: $main-color !important
+			text-align: center
