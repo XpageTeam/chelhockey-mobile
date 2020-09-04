@@ -32,7 +32,7 @@
     "gulp-zip": "^3.2.0",
     "imagemin-pngquant": "^5.1.0",
     "node-bourbon": "^4.2.8",
-    "node-sass": "^4.8.3",
+    "node-sass": "^4.13.1",
     "postcss-data-packer": "^1.2.3",
     "postcss-flexbugs-fixes": "^2.1.0",
     "vinyl-ftp": "^0.6.1"
